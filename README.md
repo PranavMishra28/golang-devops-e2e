@@ -1,9 +1,5 @@
 # Go Web Application DevOps Project
 
-[![CI Pipeline](https://github.com/yourusername/go-web-app-devops/workflows/CI/badge.svg)](https://github.com/yourusername/go-web-app-devops/actions)
-[![ArgoCD Status](https://img.shields.io/badge/ArgoCD-Synced-success)](https://argocd.yourdomain.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## 📋 Overview
 
 This project demonstrates a complete end-to-end DevOps pipeline for a Golang-based web application, covering containerization, CI/CD automation, GitOps, and production-grade deployment using industry-standard tools. It provides a foundation for cloud-native applications with Kubernetes and microservices architecture.
