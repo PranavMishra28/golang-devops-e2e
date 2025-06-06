@@ -1,38 +1,43 @@
-# Containerize the go application that we have created
-# This is the Dockerfile that we will use to build the image
-# and run the container
+# Start by using the official Golang image (version 1.21) as the base image for building the application.
+# This image contains all the necessary tools to build Go applications.
+FROM golang:1.22.5 as base
 
-# Start with a base image
-FROM golang:1.21 as base
-
-# Set the working directory inside the container
+# Set the working directory inside the container to /app.
+# All subsequent commands will be run from this directory.
 WORKDIR /app
 
-# Copy the go.mod and go.sum files to the working directory
-COPY go.mod ./
+# Copy the go.mod file (which lists dependencies) into the working directory.
+# This allows us to download dependencies before copying the rest of the source code,
+# which helps leverage Docker's build cache for faster builds.
+COPY go.mod .
 
-# Download all the dependencies
+# Download all Go module dependencies specified in go.mod.
+# This step ensures that all required packages are available for building the app.
 RUN go mod download
 
-# Copy the source code to the working directory
+# Copy the rest of the application source code from the host into the container's working directory.
+# This includes all .go files and any other files needed for the build.
 COPY . .
 
-# Build the application
-RUN go build -o main .
+# Build the Go application.
+# The output binary will be placed at the root (/) of the container filesystem and named 'main'.
+RUN go build -o /main .
 
-#######################################################
-# Reduce the image size using multi-stage builds
-# We will use a distroless image to run the application
+# Start a new, final stage using a minimal, secure distroless image.
+# Distroless images contain only the application and its runtime dependencies, reducing the attack surface.
 FROM gcr.io/distroless/base
 
-# Copy the binary from the previous stage
-COPY --from=base /app/main .
+# Copy the compiled Go binary from the previous build stage into the root of the new image.
+COPY --from=base /main .
 
-# Copy the static files from the previous stage
-COPY --from=base /app/static ./static
+# Copy the 'static' directory (e.g., for serving static files like HTML, CSS, JS) from the build stage.
+# This ensures static assets are available in the final image.
+COPY --from=base /app/static /static
 
-# Expose the port on which the application will run
-EXPOSE 8080
+# Expose port 8080 to allow traffic to the application.
+# This is the port your Go web server is expected to listen on.
+EXPOSE 8080 
 
-# Command to run the application
-CMD ["./main"]
+# Set the default command to run the compiled Go binary.
+# The application will start when the container runs.
+CMD ["/main"]
