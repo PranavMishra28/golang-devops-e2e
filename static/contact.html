@@ -1,68 +1,137 @@
-<Doctype html>
-<html>
-    <head>
-        <title>Contact</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
-
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
-
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
-
-            main {
-                padding: 20px;
-            }
-
-            section {
-                margin-bottom: 20px;
-            }
-
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Pranav Mishra</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="home" class="logo">
+                <span>Pranav Mishra</span>
+            </a>
             <nav>
                 <ul>
                     <li><a href="home">Home</a></li>
                     <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
+                    <li><a href="projects">Projects</a></li>
+                    <li><a href="contact" class="active">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <section>
-                <h1>Contact Us</h1>
-                <p>For any doubts while learning, Join our Members only exclusive slack channel</p>
-                <a href="https://www.youtube.com/abhishekVeeramalla/join">Join Slack</a>
+    <section>
+        <div class="container">
+            <h1 class="section-title">Get In Touch</h1>
+            <div class="grid grid-2" style="align-items: start;">
+                <div>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                        I'm currently looking for entry-level full-time roles in Software Engineering, Cloud/DevOps, and AI/ML Engineering. Feel free to reach out via email or through any of my social media profiles.
+                    </p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:mishrapranav82@gmail.com" style="color: var(--primary-color); text-decoration: none;">mishrapranav82@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/pm28/" target="_blank" style="color: var(--primary-color); text-decoration: none;">linkedin.com/in/pm28</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/PranavMishra28" target="_blank" style="color: var(--primary-color); text-decoration: none;">github.com/PranavMishra28</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h3>Portfolio</h3>
+                                <a href="https://pranavmishra28.vercel.app/" target="_blank" style="color: var(--primary-color); text-decoration: none;">pranavmishra28.vercel.app</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3 style="margin-bottom: 1.5rem;">Send Me a Message</h3>
+                        <form id="contact-form">
+                            <div style="margin-bottom: 1rem;">
+                                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
+                                <input type="text" id="name" name="name" style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: var(--border-radius);" required>
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+                                <input type="email" id="email" name="email" style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: var(--border-radius);" required>
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+                                <input type="text" id="subject" name="subject" style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: var(--border-radius);" required>
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                                <textarea id="message" name="message" rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: var(--border-radius); resize: vertical;" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Pranav Mishra</h3>
+                    <p>Software Engineer | Cloud & AI Enthusiast | Startup Builder</p>
+                    <p>Currently seeking entry-level full-time roles in Software Engineering, Cloud/DevOps, and AI/ML Engineering.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/PranavMishra28" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/pm28/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:mishrapranav82@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pranav Mishra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

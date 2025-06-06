@@ -4,88 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>    
+    <title>Pranav Mishra | Software Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="courses">Courses</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="container navbar">
+            <a href="home" class="logo">
+                <span>Pranav Mishra</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="home" class="active">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="projects">Projects</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    <div class="hero">
+        <div class="container">
+            <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1>Software Engineer & Cloud Enthusiast</h1>
+                <p>Hi, I'm Pranav — a Computer Science graduate from Penn State University with a passion for building real-world, scalable software and bringing innovative ideas to life at the intersection of technology, design, and impact.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <a href="about" class="btn btn-primary">Learn More</a>
+                    <a href="contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <main>
-        <section>
-            <h1>Learn DevOps from Basics</h1>
-            <p>The main purpose of this website is to guide people on how to learn DevOps 
-                from basics for Free. We will provide you with the best resources to learn.
-            </p>
-        </section>
+    <section style="background-color: white;">
+        <div class="container">
+            <h2 class="section-title">What I Do</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Software Development</h3>
+                        <p>Building robust, scalable applications using modern technologies and best practices.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Infrastructure</h3>
+                        <p>Designing and implementing secure, efficient cloud solutions on AWS and other platforms.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI & ML Engineering</h3>
+                        <p>Developing intelligent systems and applications with modern AI/ML technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>Overview</h2>
-            <p> Zero to Hero courses on all DevOps tools and popular Cloud(AWS and Azure) platform</p>
-        </section>
-
-        <section>
-            <h2>Courses Offered</h2>
-            <p>Please look at the <a href="courses">courses</a> section.</p>  
-        </section>
-    </main>
+    <section>
+        <div class="container">
+            <h2 class="section-title">Featured Experience</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Deloitte</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Technology & Strategy Consulting Intern | May 2024 – Aug 2024</p>
+                        <p>Worked across digital transformation and IT risk engagements, focusing on cloud strategy and secure infrastructure implementation.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>SipUp.ca</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Founder & CEO</p>
+                        <p>Launched a smart drink management platform to digitize bar orders and analytics. Partnered with 6+ bars across Canada and led product development.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="about" class="btn btn-outline">View Full Experience</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; Abhishek.Veeramalla</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Pranav Mishra</h3>
+                    <p>Software Engineer | Cloud & AI Enthusiast | Startup Builder</p>
+                    <p>Currently seeking entry-level full-time roles in Software Engineering, Cloud/DevOps, and AI/ML Engineering.</p>
+                </div>                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/PranavMishra28" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/pm28/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:mishrapranav82@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pranav Mishra. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

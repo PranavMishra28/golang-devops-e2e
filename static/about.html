@@ -1,90 +1,212 @@
-<Docktype html>
-<html>
-    <head>
-        <title>About</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
-
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
-
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
-
-            main {
-                padding: 20px;
-            }
-
-            section {
-                margin-bottom: 20px;
-            }
-
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Pranav Mishra</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="home" class="logo">
+                <span>Pranav Mishra</span>
+            </a>
             <nav>
                 <ul>
                     <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="about" class="active">About</a></li>
+                    <li><a href="projects">Projects</a></li>
                     <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>    <section>
+        <div class="container">
+            <div style="margin-bottom: 3rem;">
+                <h1 class="section-title">About Me</h1>
+                <p style="font-size: 1.1rem; max-width: 800px; margin-bottom: 2rem;">
+                    Hi, I'm Pranav — a Computer Science graduate from Penn State University (University Park) with minors in Mathematics and Business Fundamentals. I'm passionate about building real-world, scalable software and bringing innovative ideas to life at the intersection of technology, design, and impact.
+                </p>
+                <p style="font-size: 1.1rem; max-width: 800px; margin-bottom: 2rem;">
+                    I've interned at companies like Deloitte and SPARC Foundation, where I worked on a wide range of technical challenges in software development, cloud infrastructure, and AI-driven systems. I've also been deeply involved in startup projects, most notably SipUp.ca, a bar tech platform I helped launch in Canada to streamline operations and enhance customer experience across partner venues.
+                </p>
+            </div>
 
-        <main>
-            <section>
-                <h1>About the Author</h1>
-                <p>Hi Everyone, My name is Abhishek and welcome to my channel :)</p>
+            <h2 class="section-title">Education</h2>
+            <div class="card" style="margin-bottom: 3rem;">
+                <div class="card-body">
+                    <h3>Penn State University (University Park)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Computer Science, Class of 2025</p>
+                    <p><strong>Minors:</strong> Mathematics, Business Fundamentals</p>
+                </div>
+            </div>
 
-                    <p>    I am an opensource enthusiast and a great believer in sharing knowledge. </p>
-                        <p>  I have my footprints in popular opensource projects like Argo CD, Argo CD Operator, Argo Rollouts Manager, GitOps Operator, F5 Ingress Controller, Nginx Ingress Controller by Nginx and others. </p>
-                    
-                            <p> Apart from working with Red Hat as a GitOps product lead, I also hold below positions in OpenSource communities</p>
-                                <p>  - Maintainer of Argo CD Operator</p>
-                                    <p> - Creator of Argo Rollouts Manager</p>
-                                        <p> - Maintainer of RedHat Developer (GitOps operator)</p>
-                                            <p> - Member of Argo Project</p>
-                                                <p> - Member of Argo SIG Security</p>
-                    
-                                                    <p> If you want to learn complete devops for free with practical projects, checkout the playlist</p>
-                                                        <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa"> Playlists</a></p>
-                    
-                                                            <p> Please subscribe to the channel to keep learning and growing together. Thanks :)</p>
-            </section>
-        </main>
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item timeline-left">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Deloitte</h3>
+                            <p style="color: var(--text-muted);">Technology & Strategy Consulting Intern</p>
+                            <p style="font-size: 0.875rem; margin-bottom: 1rem;">May 2024 – Aug 2024</p>
+                            <p>Worked across digital transformation and IT risk engagements, focusing on cloud strategy and secure infrastructure implementation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item timeline-right">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>SPARC Foundation</h3>
+                            <p style="color: var(--text-muted);">Software Development Intern</p>
+                            <p style="font-size: 0.875rem; margin-bottom: 1rem;">Jan 2025 – Present</p>
+                            <p>Building and maintaining financial literacy and empowerment platforms with scalable backend services and modern UI components.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item timeline-left">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Nittany AI Advance</h3>
+                            <p style="color: var(--text-muted);">Software Engineering Intern</p>
+                            <p style="font-size: 0.875rem; margin-bottom: 1rem;">Aug 2023 – Jan 2024</p>
+                            <p>Contributed to AI-powered Penn State initiatives. Worked on ML pipelines, automation, and ethical AI integrations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item timeline-right">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>SipUp.ca</h3>
+                            <p style="color: var(--text-muted);">Founder & CEO</p>
+                            <p>Launched a smart drink management platform to digitize bar orders and analytics. Partnered with 6+ bars across Canada.</p>
+                            <p>Led product development, built the tech stack (React, Firebase, Node.js, Stripe), and handled deployment and marketing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <footer>
-            <p>&copy; Abhishek.Veeramalla</p>
-        </footer>
-    </body>
+            <h2 class="section-title" style="margin-top: 3rem;">Skills & Technologies</h2>
+            <div class="grid grid-2" style="margin-bottom: 2rem;">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Programming Languages</h3>
+                        <div>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Golang</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Bash</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Frameworks</h3>
+                        <div>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Cloud & Infrastructure</h3>
+                        <div>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">ArgoCD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3>AI/ML</h3>
+                        <div>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">LLM fine-tuning</span>
+                            <span class="skill-tag">RAG pipelines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title">What I'm Looking For</h2>
+            <p style="font-size: 1.1rem; max-width: 800px; margin-bottom: 1.5rem;">
+                Currently seeking entry-level full-time roles in:
+            </p>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-body" style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Software Engineering</h3>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body" style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud/DevOps Engineering</h3>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body" style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI/ML Engineering</h3>
+                    </div>
+                </div>
+            </div>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 2rem 0;">
+                I'm especially excited about roles where I can learn fast, contribute meaningfully, and help shape early-stage products or large-scale systems.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Pranav Mishra</h3>
+                    <p>Software Engineer | Cloud & AI Enthusiast | Startup Builder</p>
+                    <p>Currently seeking entry-level full-time roles in Software Engineering, Cloud/DevOps, and AI/ML Engineering.</p>
+                </div>                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/PranavMishra28" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/pm28/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:mishrapranav82@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pranav Mishra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
