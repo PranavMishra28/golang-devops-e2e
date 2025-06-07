@@ -6,7 +6,13 @@ This project demonstrates a complete end-to-end DevOps pipeline for a Golang-bas
 
 The web application itself is a simple website built with Go's `net/http` package that serves static HTML pages.
 
-![Website](static/images/golang-website.png)
+## 📷 Project Screenshots
+
+![Screenshot 1](images/1.png)
+
+![Screenshot 2](images/2.png)
+
+![Screenshot 3](images/3.png)
 
 ## 🚀 Features
 
