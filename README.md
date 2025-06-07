@@ -17,6 +17,7 @@ The web application itself is a simple website built with Go's `net/http` packag
 ## 🚀 Features
 
 ### Application Features
+
 - Simple web server with multiple pages (Home, Courses, About, Contact)
 - Static content serving
 - Lightweight and fast Go-based implementation
@@ -24,7 +25,8 @@ The web application itself is a simple website built with Go's `net/http` packag
 ### DevOps Implementation
 
 #### 🐳 Containerization
-- **Multi-Stage Docker Build**: 
+
+- **Multi-Stage Docker Build**:
   - Efficient containerization using a lightweight multi-stage Dockerfile
   - Build stage using official `golang` image
   - Runtime stage using minimal `distroless/base` image
@@ -32,6 +34,7 @@ The web application itself is a simple website built with Go's `net/http` packag
   - Clear separation of build and runtime layers
 
 #### 🎡 Kubernetes Deployment
+
 - **Base Manifests**:
   - Deployment configuration with replicas and resource limits
   - Service definition for internal networking
@@ -39,6 +42,7 @@ The web application itself is a simple website built with Go's `net/http` packag
   - Environment-agnostic templates for reusability
 
 #### 📊 Helm Chart Configuration
+
 - **Custom Helm Charts**:
   - Environment-specific values (Dev, QA, Production)
   - Parameterized templates for consistent deployments
@@ -46,6 +50,7 @@ The web application itself is a simple website built with Go's `net/http` packag
   - Values overriding for environment customization
 
 #### 🔄 CI Pipeline (GitHub Actions)
+
 - **Automated Workflow**:
   - Triggered on every Git push
   - Parallel testing and linting
@@ -55,6 +60,7 @@ The web application itself is a simple website built with Go's `net/http` packag
   - Status notifications
 
 #### 📤 CD Pipeline (ArgoCD + GitOps)
+
 - **Declarative Delivery**:
   - Git repository as single source of truth
   - ArgoCD syncing changes from Git to the cluster
@@ -63,6 +69,7 @@ The web application itself is a simple website built with Go's `net/http` packag
   - Drift detection
 
 #### ☁️ Kubernetes Cluster Setup
+
 - **Amazon EKS Configuration**:
   - Managed Kubernetes with Fargate profiles
   - Required node groups and IAM roles
@@ -71,6 +78,7 @@ The web application itself is a simple website built with Go's `net/http` packag
   - kubectl, eksctl, and Helm setup for access
 
 #### 🌐 Ingress Controller
+
 - **NGINX Ingress Controller**:
   - External access management
   - Path-based routing configured
@@ -78,6 +86,7 @@ The web application itself is a simple website built with Go's `net/http` packag
   - Rate limiting and access control
 
 #### 🔗 DNS Mapping
+
 - **Domain Configuration**:
   - Custom domain exposure
   - Integration with AWS Route53
@@ -86,18 +95,18 @@ The web application itself is a simple website built with Go's `net/http` packag
 
 ## 🔧 Tech Stack & Tools
 
-| Category | Tools Used |
-|----------|------------|
-| **Language** | Golang |
-| **Containerization** | Docker (Multi-stage build) |
-| **Orchestration** | Kubernetes (EKS) |
-| **Package Management** | Helm |
-| **CI/CD** | GitHub Actions, ArgoCD |
-| **GitOps** | ArgoCD (Declarative delivery) |
-| **Cluster Provisioning** | Amazon EKS, eksctl, kubectl |
-| **Ingress** | NGINX Ingress Controller |
-| **Domain Management** | AWS Route53, ExternalDNS |
-| **Version Control** | Git + GitHub |
+| Category                 | Tools Used                    |
+| ------------------------ | ----------------------------- |
+| **Language**             | Golang                        |
+| **Containerization**     | Docker (Multi-stage build)    |
+| **Orchestration**        | Kubernetes (EKS)              |
+| **Package Management**   | Helm                          |
+| **CI/CD**                | GitHub Actions, ArgoCD        |
+| **GitOps**               | ArgoCD (Declarative delivery) |
+| **Cluster Provisioning** | Amazon EKS, eksctl, kubectl   |
+| **Ingress**              | NGINX Ingress Controller      |
+| **Domain Management**    | AWS Route53, ExternalDNS      |
+| **Version Control**      | Git + GitHub                  |
 
 ## 📈 Outcomes & Benefits
 
@@ -121,12 +130,14 @@ The web application itself is a simple website built with Go's `net/http` packag
 ### Local Development
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/go-web-app-devops.git
    cd go-web-app-devops
    ```
 
 2. Run the application locally:
+
    ```bash
    go run main.go
    ```
@@ -175,6 +186,7 @@ helm upgrade go-web-app ./helm/go-web-app-chart --values ./helm/go-web-app-chart
 ### EKS Deployment
 
 Follow the detailed instructions in the `eks/` directory:
+
 1. Prerequisites: `eks/01-prereq.md`
 2. Cluster Setup: `eks/02-install-eks-fargate.md`
 
